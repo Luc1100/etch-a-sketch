@@ -17,3 +17,7 @@ body {
     box-sizing: border-box;
     margin: 0
 }
+
+.on-hover {
+    background-color: red;
+}
