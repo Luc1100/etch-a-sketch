@@ -1,5 +1,19 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: orange;
+}
+
+#grid-container {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+}
+
+.grid-square {
+    border: 1px solid black;
+    width: 6.25%;
+    aspect-ratio: 1 / 1;
+    box-sizing: border-box;
+    margin: 0
 }
