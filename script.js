@@ -10,7 +10,7 @@ function setUpGrid(size) {
         gridContainer.appendChild(gridSquare);
         
         gridSquare.addEventListener("mouseover", () => {
-            gridSquare.classList.add("on-hover");
+            gridSquare.setAttribute("style", `width: ${1/size * 100}%; background-color: ${currColor};`)
         });
     }
 }
@@ -18,10 +18,19 @@ function setUpGrid(size) {
 const gridSizeBtn = document.querySelector("#grid-size-btn");
 gridSizeBtn.addEventListener("click", () => {
     let size = prompt("Enter a grid size (1-100)");
-    while (!(size < 100)) {
+    while (!(size <= 100)) {
         size = prompt("Size must be 100 or less!");
     }
     setUpGrid(size)
 });
 
-setUpGrid(16)
+let currColor = "rgb(0,0,0,1)"
+
+const colorBtns = document.querySelectorAll(".color-btn")
+colorBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        currColor = getComputedStyle(btn)['background-color'];
+    });
+});
+
+setUpGrid(16);

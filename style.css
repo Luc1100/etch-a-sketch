@@ -3,6 +3,13 @@ body {
     padding: 0;
 }
 
+#drawing-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
 #grid-container {
     width: 50%;
     display: flex;
@@ -18,5 +25,45 @@ body {
 }
 
 .on-hover {
-    background-color: red;
+    background-color: #DDD;
+}
+
+#color-btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.color-btn {
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    box-sizing: border-box;
+}
+
+#black-btn {
+    background-color: #000000;
+}
+
+#red-btn {
+    background-color: #FF595E;
+}
+
+#yellow-btn {
+    background-color: #FFCA3A;
+}
+
+#green-btn {
+    background-color: #8AC926;
+}
+
+#blue-btn {
+    background-color: #1982C4;
+}
+
+#purple-btn {
+    background-color: #6A4C93;
+}
+
+#white-btn {
+    background-color: #FFFFFF;
 }
