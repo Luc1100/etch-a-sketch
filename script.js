@@ -18,7 +18,7 @@ function setUpGrid(size) {
 const gridSizeBtn = document.querySelector("#grid-size-btn");
 gridSizeBtn.addEventListener("click", () => {
     let size = prompt("Enter a grid size (1-100)");
-    while (!(size <= 100)) {
+    while (!(size <= 100) || !(size > 0)) {
         size = prompt("Size must be 100 or less!");
     }
     setUpGrid(size)
